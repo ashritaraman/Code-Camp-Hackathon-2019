@@ -7,9 +7,14 @@ class PlacesController < ApplicationController
     @places = Place.all
   end
 
+  def root
+    gon.ally_place = AllyPlace.all
+  end
+
   # GET /places/1
   # GET /places/1.json
   def show
+    gon.ally_place = AllyPlace.all
   end
 
   # GET /places/new

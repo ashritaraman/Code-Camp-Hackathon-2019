@@ -1,7 +1,9 @@
 class AllyPlacesController < ApplicationController
   before_action :set_place
   before_action :set_ally_place, only: [:show, :edit, :update, :destroy]
-
+  def root
+    gon.ally_place = AllyPlace.all
+  end
   # GET places/1/ally_places
   def index
     @ally_places = @place.ally_places
@@ -45,6 +47,21 @@ class AllyPlacesController < ApplicationController
     @ally_place.destroy
 
     redirect_to place_ally_places_url(@place)
+  end
+
+  # add in iterating through db to return lat and long
+  AllyPlace = Struct.new(:name, :latitude, :longitude, :donation, :description)
+
+  def dashboard
+    @ally_place = AllyPlace.all.map do |ally_record|
+      AllyPlace.new.tap do |ally|
+        ally.name = ally_record.name
+        ally.latitude = ally_record.latitude
+        ally.longitude = ally_record.longitude
+        ally.donation = ally_record.donation
+        ally.description = ally_record.description
+      end
+    end
   end
 
   private

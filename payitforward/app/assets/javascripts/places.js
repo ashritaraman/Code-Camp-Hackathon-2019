@@ -30,6 +30,20 @@ function initMap(lat, lng) {
     // Browser doesn't support Geolocation
     handleLocationError(false, infoWindow, map.getCenter());
   }
+
+  // adds markers for submitted locations
+  for(var i = 0; i < gon.ally_place.length; i++){
+      var marker = new google.maps.Marker({
+        position: { lat: Number(gon.ally_place[i].latitude), lng: Number(gon.ally_place[i].longitude) },
+        title: gon.ally_place[i].name,
+        map: map
+      });
+
+      marker.addListener('click', function () {
+          var infoWindow = new google.maps.InfoWindow;
+          infoWindow.open(map, marker);
+      });
+    }
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
@@ -39,3 +53,5 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
                         'Error: Your browser doesn\'t support geolocation.');
   infoWindow.open(map);
 }
+
+// add function that iterates through rails db and populates markers on load

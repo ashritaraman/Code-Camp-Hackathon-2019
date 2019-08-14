@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 
 <html>
+<%= include_gon %>
+<%= Gon::Base.render_data({}) %>
   <head>
-    <title>Payitforward</title>
+    <title>Pay It Forward</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= javascript_include_tag 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDF2imlYNhnywfMUt9XCb4nRrmpRa4WVTc' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
