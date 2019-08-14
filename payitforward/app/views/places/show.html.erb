@@ -1,0 +1,36 @@
+<% provide :head_tags do %>
+  <meta name='turbolinks-visit-control' content='reload'>
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      initMap(<%=@place.latitude%>, <%=@place.longitude%>)
+    });
+  </script>
+<% end %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+    <div id="map"></div>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @place.name %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @place.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @place.longitude %>
+</p>
+
+<%= link_to 'New Ally place', new_place_ally_place_path([:id]) %>
+
+<br>
+
+<%= link_to 'Edit', edit_place_path(@place) %> |
+<%= link_to 'Back', places_path %>

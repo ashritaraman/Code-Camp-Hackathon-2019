@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @ally_place.name %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @ally_place.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @ally_place.longitude %>
+</p>
+
+<p>
+  <b>Donation:</b>
+  <%= @ally_place.donation %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @ally_place.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_place_ally_place_path(@ally_place.place, @ally_place) %> |
+<%= link_to 'Back', place_ally_places_path(@ally_place.place) %>

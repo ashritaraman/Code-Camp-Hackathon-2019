@@ -1,0 +1,31 @@
+<h1>Listing ally_places</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+    <th>Donation</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ally_places.each do |ally_place| %>
+  <tr>
+    <td><%= ally_place.name %></td>
+    <td><%= ally_place.latitude %></td>
+    <td><%= ally_place.longitude %></td>
+    <td><%= ally_place.donation %></td>
+    <td><%= ally_place.description %></td>
+    <td><%= link_to 'Show', [ally_place.place, ally_place] %></td>
+    <td><%= link_to 'Edit', edit_place_ally_place_path(ally_place.place, ally_place) %></td>
+    <td><%= link_to 'Destroy', [ally_place.place, ally_place], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ally place', new_place_ally_place_path(params[:place_id]) %>
