@@ -47,7 +47,7 @@ function initMap(lat, lng) {
       var description = gon.ally_place[i].description ? gon.ally_place[i].description : " ";
 
       var contentString =
-      '<strong>Business Name: </strong>'+ name  + '<br>' +
+      '<h3>' + name + '</h3>'  + '<br>' +
       '<strong>Food Category: </strong>'+ category + '<br>' +
       '<strong>Hours of Operation: </strong>'+ hours_of_operation + '<br>' +
       '<strong>Description: </strong>'+ description + '<br>';
