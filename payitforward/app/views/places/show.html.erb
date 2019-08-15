@@ -15,26 +15,26 @@
 </p>
 
 <div align="center">
-  <p>
+  <p class = "description">
     <strong>Name:</strong>
     <%= @place.name %>
   </p>
 
-  <p>
+  <p class = "description">
     <strong>Latitude:</strong>
     <%= @place.latitude %>
   </p>
 
-  <p>
+  <p class = "description">
     <strong>Longitude:</strong>
     <%= @place.longitude %>
   </p>
 
-  <%= link_to 'Add new business', new_place_ally_place_path(@place) %>
+  <%= link_to '<button type="button">Add new business</button>'.html_safe, new_place_ally_place_path(@place) %>
 
-  <br>
-  
-  <%= link_to 'Edit', edit_place_path(@place) %> |
-  <%= link_to 'Back', places_path %>
+
+
+  <%= link_to '<button type="button">Edit Location</button>'.html_safe, edit_place_path(@place) %>
+  <%= link_to '<button type="button">List of Locations</button>'.html_safe, places_path %>
 
 </div>
