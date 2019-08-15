@@ -50,7 +50,7 @@ class AllyPlacesController < ApplicationController
   end
 
   # add in iterating through db to return lat and long
-  AllyPlace = Struct.new(:name, :latitude, :longitude, :donation, :description)
+  AllyPlace = Struct.new(:name, :category, :hours_of_operation, :latitude, :longitude, :donation, :description)
 
   def dashboard
     @ally_place = AllyPlace.all.map do |ally_record|
@@ -60,6 +60,8 @@ class AllyPlacesController < ApplicationController
         ally.longitude = ally_record.longitude
         ally.donation = ally_record.donation
         ally.description = ally_record.description
+        ally.category = ally_record.category
+        ally.hours_of_operation = ally_record.hours_of_operation
       end
     end
   end
@@ -76,6 +78,6 @@ class AllyPlacesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def ally_place_params
-      params.require(:ally_place).permit(:name, :latitude, :longitude, :donation, :description)
+      params.require(:ally_place).permit(:name, :category, :hours_of_operation, :latitude, :longitude, :donation, :description,)
     end
 end

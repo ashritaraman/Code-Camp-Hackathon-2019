@@ -5,7 +5,9 @@ class CreateAllyPlaces < ActiveRecord::Migration[5.2]
       t.string :name
       t.decimal :latitude
       t.decimal :longitude
+      t.string :category
       t.decimal :donation
+      t.string :hours_of_operation
       t.string :description
 
       t.timestamps

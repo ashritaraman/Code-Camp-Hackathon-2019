@@ -7,6 +7,16 @@
 </p>
 
 <p>
+  <b>Category:</b>
+  <%= @ally_place.category %>
+</p>
+
+<p>
+  <b>Hours of Operation:</b>
+  <%= @ally_place.hours_of_operation %>
+</p>
+
+<p>
   <b>Latitude:</b>
   <%= @ally_place.latitude %>
 </p>
@@ -27,5 +37,7 @@
 </p>
 
 
+<%= link_to 'Back to Map', @place %>
+<br>
 <%= link_to 'Edit', edit_place_ally_place_path(@ally_place.place, @ally_place) %> |
 <%= link_to 'Back', place_ally_places_path(@ally_place.place) %>
