@@ -19,8 +19,9 @@
         <td class = "tabletext"><%= place.name %></td>
         <td class = "tabletext"><%= place.latitude %></td>
         <td class = "tabletext"><%= place.longitude %></td>
-        <td class = "tabletext"><%= link_to 'Show Region', place %></td>
-        <td class = "tabletext"><%= link_to 'Remove Region', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class = "tabletext"><%= link_to 'Show', place %></td>
+        <td class = "tabletext"><%= link_to 'Edit', edit_place_path(place) %>
+        <td class = "tabletext"><%= link_to 'Remove', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

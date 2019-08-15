@@ -32,7 +32,7 @@ class PlacesTest < ApplicationSystemTestCase
     fill_in "Name", with: @place.name
     click_on "Update Region"
 
-    assert_text "Place was successfully updated"
+    assert_text "Region was successfully updated!"
     click_on "Back"
   end
 
