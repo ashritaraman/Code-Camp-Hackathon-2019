@@ -7,6 +7,8 @@
     <th>Longitude</th>
     <th>Donation</th>
     <th>Description</th>
+    <th>Category</th>
+    <th>Hours of Operation</th>
     <th></th>
     <th></th>
     <th></th>
@@ -19,6 +21,8 @@
     <td><%= ally_place.longitude %></td>
     <td><%= ally_place.donation %></td>
     <td><%= ally_place.description %></td>
+    <td><%= ally_place.category %></td>
+    <td><%= ally_place.hours_of_operation %></td>
     <td><%= link_to 'Show', [ally_place.place, ally_place] %></td>
     <td><%= link_to 'Edit', edit_place_ally_place_path(ally_place.place, ally_place) %></td>
     <td><%= link_to 'Destroy', [ally_place.place, ally_place], method: :delete, data: { confirm: 'Are you sure?' } %></td>
