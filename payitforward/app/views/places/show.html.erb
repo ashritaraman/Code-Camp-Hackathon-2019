@@ -10,6 +10,8 @@
 
 <p id="notice"><%= notice %></p>
 
+<div align = "center"> <%= image_tag("logo_small.png")%> </div>
+
 <p>
     <div id="map"></div>
 </p>
@@ -33,7 +35,7 @@
   <%= link_to 'Add new business', new_place_ally_place_path(@place) %>
 
   <br>
-  
+
   <%= link_to 'Edit', edit_place_path(@place) %> |
   <%= link_to 'Back', places_path %>
 
