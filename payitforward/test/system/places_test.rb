@@ -30,7 +30,7 @@ class PlacesTest < ApplicationSystemTestCase
     fill_in "Latitude", with: @place.latitude
     fill_in "Longitude", with: @place.longitude
     fill_in "Name", with: @place.name
-    click_on "Update Place"
+    click_on "Update Region"
 
     assert_text "Place was successfully updated"
     click_on "Back"

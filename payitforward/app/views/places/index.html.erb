@@ -1,7 +1,7 @@
 <%= include_gon %>
 <p id="notice"><%= notice %></p>
 
-<h1>Places</h1>
+<h1>Regions</h1>
 
 <table>
   <thead>
@@ -16,11 +16,11 @@
   <tbody>
     <% @places.each do |place| %>
       <tr>
-        <td><%= place.name %></td>
-        <td><%= place.latitude %></td>
-        <td><%= place.longitude %></td>
-        <td><%= link_to 'Show', place %></td>
-        <td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class = "tabletext"><%= place.name %></td>
+        <td class = "tabletext"><%= place.latitude %></td>
+        <td class = "tabletext"><%= place.longitude %></td>
+        <td class = "tabletext"><%= link_to 'Show Region', place %></td>
+        <td class = "tabletext"><%= link_to 'Remove Region', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Place', new_place_path %>
+<%= link_to '<button type="button">Add new Region</button>'.html_safe, new_place_path %>
