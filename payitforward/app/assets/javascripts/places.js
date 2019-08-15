@@ -41,11 +41,16 @@ function initMap(lat, lng) {
         map: map
       });
 
+      var name = gon.ally_place[i].name ? gon.ally_place[i].name : " ";
+      var category = gon.ally_place[i].category ? gon.ally_place[i].category : " ";
+      var hours_of_operation = gon.ally_place[i].hours_of_operation ? gon.ally_place[i].hours_of_operation : " ";
+      var description = gon.ally_place[i].description ? gon.ally_place[i].description : " ";
+
       var contentString =
-      '<strong>Business Name: </strong>'+ gon.ally_place[i].name  + '<br>' +
-      '<strong>Food Category: </strong>'+ gon.ally_place[i].category + '<br>' +
-      '<strong>Hours of Operation: </strong>'+ gon.ally_place[i].hours_of_operation + '<br>' +
-      '<strong>Description: </strong>'+ gon.ally_place[i].description + '<br>';
+      '<strong>Business Name: </strong>'+ name  + '<br>' +
+      '<strong>Food Category: </strong>'+ category + '<br>' +
+      '<strong>Hours of Operation: </strong>'+ hours_of_operation + '<br>' +
+      '<strong>Description: </strong>'+ description + '<br>';
 
       //getAddress(gon.ally_place[i].latitude, gon.ally_place[i].longitude);
       google.maps.event.addListener(marker, 'click', getInfoCallback(map, contentString));
