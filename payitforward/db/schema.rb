@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_14_033257) do
+ActiveRecord::Schema.define(version: 2019_08_15_023424) do
 
   create_table "ally_places", force: :cascade do |t|
     t.integer "place_id"
@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 2019_08_14_033257) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "hours_of_operation"
+    t.string "category"
     t.index ["place_id"], name: "index_ally_places_on_place_id"
   end
 

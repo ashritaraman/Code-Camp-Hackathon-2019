@@ -1,5 +1,6 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
+var addr = "";
 function initMap(lat, lng) {
     var myCoords = new google.maps.LatLng(lat, lng);
     var mapOptions = {
@@ -32,6 +33,7 @@ function initMap(lat, lng) {
   }
 
   // adds markers for submitted locations
+  var infowindow = new google.maps.InfoWindow();
   for(var i = 0; i < gon.ally_place.length; i++){
       var marker = new google.maps.Marker({
         position: { lat: Number(gon.ally_place[i].latitude), lng: Number(gon.ally_place[i].longitude) },
@@ -39,11 +41,56 @@ function initMap(lat, lng) {
         map: map
       });
 
-      marker.addListener('click', function () {
-          var infoWindow = new google.maps.InfoWindow;
-          infoWindow.open(map, marker);
-      });
-    }
+      var name = gon.ally_place[i].name ? gon.ally_place[i].name : " ";
+      var category = gon.ally_place[i].category ? gon.ally_place[i].category : " ";
+      var hours_of_operation = gon.ally_place[i].hours_of_operation ? gon.ally_place[i].hours_of_operation : " ";
+      var description = gon.ally_place[i].description ? gon.ally_place[i].description : " ";
+
+      var contentString =
+      '<strong>Business Name: </strong>'+ name  + '<br>' +
+      '<strong>Food Category: </strong>'+ category + '<br>' +
+      '<strong>Hours of Operation: </strong>'+ hours_of_operation + '<br>' +
+      '<strong>Description: </strong>'+ description + '<br>';
+
+      //getAddress(gon.ally_place[i].latitude, gon.ally_place[i].longitude);
+      google.maps.event.addListener(marker, 'click', getInfoCallback(map, contentString));
+  }
+}
+
+function getAddress (latitude, longitude) {
+  geocodeLatLng(latitude, longitude, function (data) {
+    returnCallback(data);
+  });
+}
+
+function geocodeLatLng(latitude, longitude, callback) {
+    var geocoder = new google.maps.Geocoder;
+    var latlng = {lat: parseFloat(latitude), lng: parseFloat(longitude)};
+    geocoder.geocode({'location': latlng}, function(results, status) {
+      if (status === 'OK') {
+        if (results[0]) {
+          callback(results[0].formatted_address);
+        } else {
+          window.alert('No address found: ' + status);
+        }
+      } else {
+        window.alert('Geocoder failed due to: ' + status);
+      }
+    });
+  }
+
+function getInfoCallback(map, content) {
+    var infowindow = new google.maps.InfoWindow({content: content});
+    return function() {
+            infowindow.setContent(content);
+            infowindow.open(map, this);
+        };
+}
+
+function returnCallback(data) {
+  //console.log("ayo");
+  addr = data;
+  console.log(addr);
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
