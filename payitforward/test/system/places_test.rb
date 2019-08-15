@@ -42,6 +42,6 @@ class PlacesTest < ApplicationSystemTestCase
       click_on "Destroy", match: :first
     end
 
-    assert_text "Place was successfully destroyed"
+    assert_text "Place was successfully removed"
   end
 end

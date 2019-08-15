@@ -1,43 +1,46 @@
 <%= include_gon %>
-<p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
+<p id="notice"><%= notice %></p>
+</br>
+
+<div class = "padinfo">
+<p class = "submitted">
+  <b class = "pinktext">Name:</b>
   <%= @ally_place.name %>
 </p>
 
-<p>
-  <b>Category:</b>
+<p class = "submitted">
+  <b class = "pinktext">Category:</b>
   <%= @ally_place.category %>
 </p>
 
-<p>
-  <b>Hours of Operation:</b>
+<p class = "submitted">
+  <b class = "pinktext">Hours of Operation:</b>
   <%= @ally_place.hours_of_operation %>
 </p>
 
-<p>
-  <b>Latitude:</b>
+<p class = "submitted">
+  <b class = "pinktext">Latitude:</b>
   <%= @ally_place.latitude %>
 </p>
 
-<p>
-  <b>Longitude:</b>
+<p class = "submitted">
+  <b class = "pinktext">Longitude:</b>
   <%= @ally_place.longitude %>
 </p>
 
-<p>
-  <b>Donation:</b>
+<p class = "submitted">
+  <b class = "pinktext">Donation:</b>
   <%= @ally_place.donation %>
 </p>
 
-<p>
-  <b>Description:</b>
+<p class = "submitted">
+  <b class = "pinktext">Description:</b>
   <%= @ally_place.description %>
 </p>
+</div>
+</br>
 
-
-<%= link_to 'Back to Map', @place %>
-<br>
-<%= link_to 'Edit', edit_place_ally_place_path(@ally_place.place, @ally_place) %> |
-<%= link_to 'Back', place_ally_places_path(@ally_place.place) %>
+<%= link_to '<button type = "button">Home</button>'.html_safe, @place %>
+<%= link_to '<button type = "button">Edit Business Information</button>'.html_safe, edit_place_ally_place_path(@ally_place.place, @ally_place) %>
+<%= link_to '<button type = "button">Back</button>'.html_safe, place_ally_places_path(@ally_place.place) %>

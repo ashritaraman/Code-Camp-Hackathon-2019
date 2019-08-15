@@ -1,4 +1,4 @@
-<h1>Listing ally_places</h1>
+<h1>Our Allies</h1>
 
 <table>
   <tr>
@@ -16,20 +16,21 @@
 
 <% @ally_places.each do |ally_place| %>
   <tr>
-    <td><%= ally_place.name %></td>
-    <td><%= ally_place.latitude %></td>
-    <td><%= ally_place.longitude %></td>
-    <td><%= ally_place.donation %></td>
-    <td><%= ally_place.description %></td>
-    <td><%= ally_place.category %></td>
-    <td><%= ally_place.hours_of_operation %></td>
-    <td><%= link_to 'Show', [ally_place.place, ally_place] %></td>
-    <td><%= link_to 'Edit', edit_place_ally_place_path(ally_place.place, ally_place) %></td>
-    <td><%= link_to 'Destroy', [ally_place.place, ally_place], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td class = "tabletext"><%= ally_place.name %></td>
+    <td class = "tabletext"><%= ally_place.latitude %></td>
+    <td class = "tabletext"><%= ally_place.longitude %></td>
+    <td class = "tabletext"><%= ally_place.donation %></td>
+    <td class = "tabletext"><%= ally_place.description %></td>
+    <td class = "tabletext"><%= ally_place.category %></td>
+    <td class = "tabletext"><%= ally_place.hours_of_operation %></td>
+    <td class = "tabletext"><%= link_to 'Show', [ally_place.place, ally_place] %></td>
+    <td class = "tabletext"><%= link_to 'Edit', edit_place_ally_place_path(ally_place.place, ally_place) %></td>
+    <td class = "tabletext"><%= link_to 'Destroy', [ally_place.place, ally_place], method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Ally Place', new_place_ally_place_path(params[:place_id]) %>
+<%= link_to '<button type = "button">Add New Business</button>'.html_safe, new_place_ally_place_path(params[:place_id]) %>
+<%= link_to '<button type = "button">Back to Map</button>'.html_safe, @place %>
