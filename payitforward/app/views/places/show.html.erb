@@ -12,26 +12,18 @@
 
 <div align = "center"> <%= image_tag("logo_small.png")%> </div>
 
+<h3> 👋  Welcome! Sign up here to be an ally for those in your community that are out of luck!
+  In order to participate, you must be a local business. You can offer food, temporary shelter, and other services! <br><br>
+  Your contribution means so much to the community - thank you in advance! </h3>
+
+
+  <div align ="center">This map is currently showing the <b><%= @place.name %></b> community. 🏠</div>
+
 <p>
     <div id="map"></div>
 </p>
 
 <div align="center">
-  <p class = "description">
-    <strong>Name:</strong>
-    <%= @place.name %>
-  </p>
-
-  <p class = "description">
-    <strong>Latitude:</strong>
-    <%= @place.latitude %>
-  </p>
-
-  <p class = "description">
-    <strong>Longitude:</strong>
-    <%= @place.longitude %>
-  </p>
-
   <%= link_to '<button type="button">Add new business</button>'.html_safe, new_place_ally_place_path(@place) %>
 
   <%= link_to '<button type="button">Edit Location</button>'.html_safe, edit_place_path(@place) %>

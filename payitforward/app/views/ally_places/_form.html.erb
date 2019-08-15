@@ -13,11 +13,12 @@
 
 
   <div class="field">
-    <%= f.label :name, class: 'label'%><br />
+    <%= f.label :name, class: 'label'%>
     <%= f.text_field :name, class: 'text_field'%>
   </div>
   <div class="field">
-    <%= f.label :category, class: 'label' %><br />
+    <%= f.label :category, class: 'label'%>
+    <p class = "explanation">Enter in what food category you would classify your restaurant as! </p>
     <%= f.text_field :category, class: 'text_field' %>
   </div>
   <div class="field">
@@ -33,19 +34,22 @@
     <%= f.text_field :longitude, class: 'text_field' %>
   </div>
   <div class="field">
-    <%= f.label :donation, class: 'label' %><br />
+    <%= f.label :donation, class: 'label' %>
+    <p class = "explanation"> Enter in a suggested donation amount for donors. <br>For suggested amount recommendations, try to request enough money to cover at least one person's share of what you're offering.</p>
     <%= f.text_field :donation, class: 'text_field' %>
   </div>
   <div class="field">
-    <%= f.label :hours_of_operation, class: 'label' %><br />
+    <%= f.label :hours_of_operation, class: 'label' %>
+    <p class = "explanation">For hours of operation, please enter in 24 hour format separated by a dash (no spaces!) <br> <strong>For example:</strong> 9:00-23:00</p>
     <%= f.text_field :hours_of_operation, class: 'text_field' %>
   </div>
   <div class="field">
-    <%= f.label :description, class: 'label' %><br />
+    <%= f.label :description, class: 'label' %>
+    <p class = "explanation">Enter in any other information you'd like to know! (Are you offering vegan food? Are you offering 3 hours of temporary shelter? Include that here!)</p>
     <%= f.text_field :description, class: 'text_field' %>
   </div><br />
   <div class="actions">
-    <%= f.submit%>
+    <%= f.submit 'Submit your business information! 😄'%>
   </div>
 
 
