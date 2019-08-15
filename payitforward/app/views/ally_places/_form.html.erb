@@ -11,27 +11,35 @@
     </div>
   <% end %>
 
+
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.label :name, class: 'label'%><br />
+    <%= f.text_field :name, class: 'text_field'%>
   </div>
   <div class="field">
-    <%= f.label :latitude %><br />
-    <%= f.text_field :latitude %>
+    <%= f.label :latitude, class: 'label' %>
+      <p class = "explanation"> Convert the address of the place you want to add to latitude and longitude using
+        <a href = "https://www.latlong.net/convert-address-to-lat-long.html" target="_blank">this link</a> </p>
+    <%= f.text_field :latitude, class: 'text_field' %>
   </div>
   <div class="field">
-    <%= f.label :longitude %><br />
-    <%= f.text_field :longitude %>
+    <%= f.label :longitude, class: 'label' %>
+    <p class = "explanation"> Convert the address of the place you want to add to latitude and longitude using
+      <a href = "https://www.latlong.net/convert-address-to-lat-long.html" target="_blank">this link</a> </p>
+    <%= f.text_field :longitude, class: 'text_field' %>
   </div>
   <div class="field">
-    <%= f.label :donation %><br />
-    <%= f.text_field :donation %>
+    <%= f.label :donation, class: 'label' %><br />
+    <%= f.text_field :donation, class: 'text_field' %>
   </div>
   <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_field :description %>
+    <%= f.label :description, class: 'label' %><br />
+    <%= f.text_field :description, class: 'text_field' %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit%>
   </div>
+
+
+
 <% end %>

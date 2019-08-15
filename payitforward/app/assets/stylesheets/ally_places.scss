@@ -1,3 +1,58 @@
 // Place all the styles related to the ally_places controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+@font-face {
+   font-family: 'Roboto-Regular';
+   src: url('/assets/Roboto-Regular.ttf')
+}
+
+
+.center {
+  text-align: center;
+}
+
+.label {
+  padding-top: 25px;
+  font-size: 25px;
+  font-family: 'Roboto-Regular';
+}
+
+.text_field {
+  width: 100%;
+  padding: 12px 25px;
+  margin: 8px 0;
+  box-sizing: border-box;
+
+}
+
+.explanation {
+  font-family: 'Roboto-Regular';
+}
+
+h1 {
+  text-align: center;
+  color: #eb6960;
+}
+
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+input[type=button], input[type=submit] {
+  background-color: #eb6960;
+  border-radius: 8px;
+  color: white;
+  padding: 15px 35px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-size: 25px;
+  font-family: 'Roboto-Regular';
+
+}

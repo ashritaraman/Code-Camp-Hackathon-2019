@@ -2,13 +2,14 @@ body {
   background-color: #fff;
   color: #333;
   margin: 33px;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  font-family: 'Roboto-Regular';
+  font-size: 20px;
+
+
 }
 
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: 'Roboto-Regular';
   font-size: 13px;
   line-height: 18px;
 }
@@ -21,14 +22,11 @@ pre {
 
 a {
   color: #000;
-
   &:visited {
-    color: #666;
+    color: #eb6960;
   }
-
   &:hover {
-    color: #fff;
-    background-color: #000;
+    background-color: #ffffff;
   }
 }
 
@@ -71,6 +69,11 @@ div {
     margin: -7px -7px 0;
     background-color: #c00;
     color: #fff;
+
+  }
+
+  h1 {
+    text-align: left;
   }
 
   ul li {
