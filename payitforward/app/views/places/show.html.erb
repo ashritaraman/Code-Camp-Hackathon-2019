@@ -14,20 +14,20 @@
 
 <h3> Welcome to Pay It Forward! 🤝 <br></h3>
 <div align="center">
-  We know it can be difficult to find food, help, and support when you’re out of luck. Using the map below ⬇️, you can find local business allies near you that will provide food, temporary shelter, or other services! Click on the pins 📍 for the different locations to find out more about each business.
+  We know it can be difficult to find food, help, and support when you’re out of luck. Using the map below ⬇️, you can find local business allies near you that will provide food, temporary shelter, and other services! Click on the pins 📍 for the different locations to find out more about each business.
   <br><br>
-  (For those that are non-business community allies, please feel free to click on the pins and click the “Pay It Forward” link — it’ll take you to a page where you can donate money 💰 to participating businesses to help fund their support efforts! 👍 Each business will specify a suggested donation amount that will help cover meals for at least one person in your community.) <br>
+  (For those that are non-business community allies, please feel free to click on the pins and click the “Pay It Forward” link — it’ll take you to a page where you can donate money 💰 to participating businesses to help fund their support efforts! 👍 Each business will specify a suggested donation amount that will help cover meals for at least one person in your community). <br>
 </div>
 
 <br>
-<h3><div align ="center">This map is currently showing the <b><%= @place.name %></b> community. 🏠</div></h3>
+<h3><div align ="center">This map is currently showing the <b><%= @place.name %></b> community 🏠</div></h3>
 
 <p>
     <div id="map"></div>
 </p>
 
 <div align="center">
-  <%= link_to '<button type="button">Add new business</button>'.html_safe, new_place_ally_place_path(@place) %>
+  <%= link_to '<button type="button">Add New Business</button>'.html_safe, new_place_ally_place_path(@place) %>
 
 
 
