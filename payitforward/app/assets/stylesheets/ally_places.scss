@@ -37,6 +37,11 @@ h1 {
   color: #eb6960;
 }
 
+h3 {
+  text-align: center;
+  color: #eb6960;
+}
+
 
 a:hover {
   color: red;
@@ -52,7 +57,20 @@ input[type=button], input[type=submit] {
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
-  font-size: 25px;
+  font-size: 20px;
+  font-family: 'Roboto-Regular';
+
+}
+
+button {
+  background-color: #eb6960;
+  border-radius: 8px;
+  color: white;
+  padding: 15px 35px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-size: 20px;
   font-family: 'Roboto-Regular';
 
 }
