@@ -17,7 +17,9 @@ ActiveRecord::Schema.define(version: 2019_08_15_023424) do
     t.string "name"
     t.decimal "latitude"
     t.decimal "longitude"
+    t.string "category"
     t.decimal "donation"
+    t.string "hours_of_operation"
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

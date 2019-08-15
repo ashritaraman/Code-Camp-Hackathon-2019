@@ -1,6 +1,6 @@
-<h1>Editing Place</h1>
+<h1>Edit Location</h1>
 
 <%= render 'form', place: @place %>
 
-<%= link_to 'Show', @place %> |
-<%= link_to 'Back', places_path %>
+<%= link_to '<button type="button">Show Place</button>'.html_safe, @place %>
+<%= link_to '<button type="button">List of Places</button>'.html_safe, places_path %>
