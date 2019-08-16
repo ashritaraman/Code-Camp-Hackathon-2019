@@ -21,6 +21,13 @@
 
 <br>
 <h3><div align ="center">This map is currently showing the <b><%= @place.name %></b> community 🏠</div></h3>
+<p><div align="center">
+    <%= form_tag places_path, :method => 'get' do %>
+        <%= text_field_tag :find_place, params[:find_place] %>
+        <%= submit_tag "Find Place", :name => nil %>
+    <% end%>
+    </div>
+</p>
 
 <p>
     <div id="map"></div>

@@ -14,6 +14,17 @@
   </thead>
 
   <tbody>
+    <% begin %>
+
+      <td><%= @find_places.name %></td>
+      <td><%= @find_places.latitude %></td>
+      <td><%= @find_places.longitude %></td>
+      <td><%= @find_places.description %></td>
+    <% rescue => e%>
+      <td> <%= "There is nothing here." %></td>
+    <% end%>
+
+    <td> <%= "This is the list of all the stores currently:" %> </td>
     <% @places.each do |place| %>
       <tr>
         <td class = "tabletext"><%= place.name %></td>

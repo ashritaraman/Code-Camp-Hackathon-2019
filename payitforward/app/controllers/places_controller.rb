@@ -5,6 +5,7 @@ class PlacesController < ApplicationController
   # GET /places.json
   def index
     @places = Place.all
+    @find_places = AllyPlace.find_place(params[:find_place])
   end
 
   def root
