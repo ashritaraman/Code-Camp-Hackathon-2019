@@ -1,0 +1,19 @@
+current directory: /Users/square/Documents/Code-Camp-Hackathon-2019/pay_it_forward/pay_it_forward/vendor/bundle/ruby/2.3.0/gems/byebug-11.0.1/ext/byebug
+/Users/square/.rvm/rubies/ruby-2.3.7/bin/ruby -I /Users/square/.rvm/rubies/ruby-2.3.7/lib/ruby/site_ruby/2.3.0 -r ./siteconf20190814-20157-r1b8w7.rb extconf.rb
+creating Makefile
+
+current directory: /Users/square/Documents/Code-Camp-Hackathon-2019/pay_it_forward/pay_it_forward/vendor/bundle/ruby/2.3.0/gems/byebug-11.0.1/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /Users/square/Documents/Code-Camp-Hackathon-2019/pay_it_forward/pay_it_forward/vendor/bundle/ruby/2.3.0/gems/byebug-11.0.1/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.bundle
+
+current directory: /Users/square/Documents/Code-Camp-Hackathon-2019/pay_it_forward/pay_it_forward/vendor/bundle/ruby/2.3.0/gems/byebug-11.0.1/ext/byebug
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 byebug.bundle ./.gem.20190814-20157-1re6s0h/byebug

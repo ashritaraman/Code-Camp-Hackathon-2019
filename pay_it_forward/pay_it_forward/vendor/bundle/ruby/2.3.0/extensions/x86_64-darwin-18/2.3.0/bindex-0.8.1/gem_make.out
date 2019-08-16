@@ -1,0 +1,15 @@
+current directory: /Users/square/Documents/Code-Camp-Hackathon-2019/pay_it_forward/pay_it_forward/vendor/bundle/ruby/2.3.0/gems/bindex-0.8.1/ext/skiptrace
+/Users/square/.rvm/rubies/ruby-2.3.7/bin/ruby -I /Users/square/.rvm/rubies/ruby-2.3.7/lib/ruby/site_ruby/2.3.0 -r ./siteconf20190814-20157-75t05k.rb extconf.rb
+creating Makefile
+
+current directory: /Users/square/Documents/Code-Camp-Hackathon-2019/pay_it_forward/pay_it_forward/vendor/bundle/ruby/2.3.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /Users/square/Documents/Code-Camp-Hackathon-2019/pay_it_forward/pay_it_forward/vendor/bundle/ruby/2.3.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/square/Documents/Code-Camp-Hackathon-2019/pay_it_forward/pay_it_forward/vendor/bundle/ruby/2.3.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 cruby.bundle ./.gem.20190814-20157-1pj6ysa/skiptrace/internal

@@ -45,12 +45,14 @@ function initMap(lat, lng) {
       var category = gon.ally_place[i].category ? gon.ally_place[i].category : " ";
       var hours_of_operation = gon.ally_place[i].hours_of_operation ? gon.ally_place[i].hours_of_operation : " ";
       var description = gon.ally_place[i].description ? gon.ally_place[i].description : " ";
+      var donation = gon.ally_place[i].donation ? gon.ally_place[i].donation : " ";
 
       var contentString =
       '<h3>' + name + '</h3>'  + '<br>' +
       '<strong>Food Category: </strong>'+ category + '<br>' +
       '<strong>Hours of Operation: </strong>'+ hours_of_operation + '<br>' +
       '<strong>Description: </strong>'+ description + '<br>' +
+      '<strong>Suggested Donation Amount: </strong>'+ donation + '<br><br>' +
       '<a href="https://www.weebly.com/app/website/cms/drafts/9PL2yBEW28s5185lE6oKf4QL168/product/pizza-slice/2" target = "_blank">Pay it Forward</a>';
 
       //getAddress(gon.ally_place[i].latitude, gon.ally_place[i].longitude);
