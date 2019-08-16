@@ -23,7 +23,8 @@ class AllyPlacesController < ApplicationController
     @ally_place = @place.ally_places.build(ally_place_params)
 
     if @ally_place.save
-      redirect_to([@ally_place.place, @ally_place], notice: 'Your business was successfully added to the map! Thank you so much for making a difference.')
+      redirect_to([@ally_place.place, @ally_place], notice: 'Your business was successfully added to the map!
+        Thank you so much for making a difference! ❤️')
     else
       render action: 'new'
     end

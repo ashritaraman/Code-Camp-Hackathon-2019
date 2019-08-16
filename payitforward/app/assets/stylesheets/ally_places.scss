@@ -119,7 +119,7 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 
 #notice {
   text-align: center;
-  font-size: 35px;
+  font-size: 25px;
   padding-top: 15px;
 }
 
@@ -129,4 +129,19 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 
 .pinktext {
   color: #eb6960;
+}
+
+.searchfield {
+  width: 50%;
+  border: 3px solid #eb6960;
+  padding: 5px;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  color: #eb6960;
+  font-size: 20px;
+}
+
+::placeholder {
+  font-size: 20px;
 }
