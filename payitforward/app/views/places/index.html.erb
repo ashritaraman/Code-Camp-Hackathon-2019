@@ -1,6 +1,38 @@
 <%= include_gon %>
 <p id="notice"><%= notice %></p>
 
+
+<h1>Search Results</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Description</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% begin %>
+
+      <td><%= @find_places.name %></td>
+      <td><%= @find_places.latitude %></td>
+      <td><%= @find_places.longitude %></td>
+      <td><%= @find_places.description %></td>
+      <td><a href="https://www.weebly.com/app/website/cms/drafts/9PL2yBEW28s5185lE6oKf4QL168/product/pizza-slice/2">Pay it Forward</a></td>
+    <% rescue => e%>
+      <td> <%= "There is nothing here." %></td>
+    <% end%>
+  </tbody>
+</table>
+
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+
 <h1>Regions</h1>
 
 <table>
@@ -14,17 +46,6 @@
   </thead>
 
   <tbody>
-    <% begin %>
-
-      <td><%= @find_places.name %></td>
-      <td><%= @find_places.latitude %></td>
-      <td><%= @find_places.longitude %></td>
-      <td><%= @find_places.description %></td>
-    <% rescue => e%>
-      <td> <%= "There is nothing here." %></td>
-    <% end%>
-
-    <td> <%= "This is the list of all the stores currently:" %> </td>
     <% @places.each do |place| %>
       <tr>
         <td class = "tabletext"><%= place.name %></td>

@@ -50,7 +50,8 @@ function initMap(lat, lng) {
       '<h3>' + name + '</h3>'  + '<br>' +
       '<strong>Food Category: </strong>'+ category + '<br>' +
       '<strong>Hours of Operation: </strong>'+ hours_of_operation + '<br>' +
-      '<strong>Description: </strong>'+ description + '<br>';
+      '<strong>Description: </strong>'+ description + '<br>' +
+      '<a href="https://www.weebly.com/app/website/cms/drafts/9PL2yBEW28s5185lE6oKf4QL168/product/pizza-slice/2" target = "_blank">Pay it Forward</a>';
 
       //getAddress(gon.ally_place[i].latitude, gon.ally_place[i].longitude);
       google.maps.event.addListener(marker, 'click', getInfoCallback(map, contentString));
